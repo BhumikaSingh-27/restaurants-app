@@ -1,0 +1,23 @@
+.review-container {
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.review-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.user {
+    display: flex;
+}
+
+.user img {
+    /* clip-path: circle(28.5% at 50% 50%); */
+    object-fit: cover;
+    width: 50px;
+    border-radius: 50%;
+}

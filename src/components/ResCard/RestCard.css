@@ -1,0 +1,15 @@
+.restCard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 1px solid; */
+    margin: 4rem;
+}
+.restCard-container:hover{
+    cursor: pointer;
+}
+
+.food-card-main {
+    display: flex;
+    gap: 1rem;
+}

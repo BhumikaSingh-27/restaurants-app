@@ -1,0 +1,38 @@
+.cuisine-type {
+    display: flex;
+    justify-content: center;
+}
+
+.rest-review-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin: 1rem 10rem
+}
+
+.single-review {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    width: 100%;
+    gap: 1rem;
+}
+
+.single-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-gray);
+
+}
+
+.resturant-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.detail {
+    color: var(--clr-gray);
+}
