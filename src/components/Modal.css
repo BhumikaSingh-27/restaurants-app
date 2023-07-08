@@ -73,4 +73,5 @@ label {
 textarea {
     width: 10rem;
     border-radius: 0.5rem;
+    padding: 1rem;
 }
