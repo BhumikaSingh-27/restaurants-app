@@ -69,3 +69,8 @@ label {
     font-weight: 700;
     font-size: 1rem;
 }
+
+textarea {
+    width: 10rem;
+    border-radius: 0.5rem;
+}
