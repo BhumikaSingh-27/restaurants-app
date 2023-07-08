@@ -9,7 +9,7 @@ const RestCard = ({ data }) => {
       <h2>{data.name}</h2>
       <div className="food-card-main">
         {data.menu.map((foodData, index) => (
-          <NavLink to={`/singlePage/${data.id}`}>
+          <NavLink className="not-link"to={`/singlePage/${data.id}`}>
             {" "}
             <div key={index}>
               <FoodCard food={foodData} name={data.name} />

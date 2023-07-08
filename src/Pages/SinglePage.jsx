@@ -13,7 +13,7 @@ const SinglePage = () => {
 
   return (
     <div className="rest-review-container">
-      <NavLink to="/">
+      <NavLink className="not-link" to="/">
         {" "}
         <div>
           <ArrowBackIcon />
@@ -32,6 +32,7 @@ const SinglePage = () => {
             <div className="detail">{findData?.address}</div>
           </div>
           <button
+            className="cta-btn"
             onClick={() => {
               setIsModal(true);
               restIdReview.current = restId;

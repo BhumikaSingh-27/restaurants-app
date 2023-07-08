@@ -8,16 +8,16 @@ const ReviewCard = ({ user }) => {
       <div className="review-detail">
         <div className="user">
           {" "}
-          <img src={user?.pp} alt="user pic"  />{" "}
+          <img src={user?.pp} alt="user pic" />{" "}
           <p>
             <b>{user?.revName}</b>
           </p>
         </div>
-        <div>{user?.comment}</div>
+        <p className="user-comment">{user?.comment}</p>
       </div>
       <div>
-        {user?.rating}
-        <StarOutlineIcon />
+        <div className="star"><span>{user?.rating}</span>
+        <StarOutlineIcon /></div>
       </div>
     </div>
   );

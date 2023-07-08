@@ -8,8 +8,14 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --clr-gray: rgb(91, 86, 86);
+  --clr-red: #ed576b;
+}
+
+h1,
+h2 {
+  margin: 1rem;
 }
 
 .App-header {
