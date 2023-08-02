@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import ReviewCard from "../components/Review/ReviewCard";
@@ -9,7 +9,11 @@ const SinglePage = () => {
   const { restId } = useParams();
 
   const findData = data.find(({ id }) => id.toString() === restId);
-  console.log(findData);
+  const sumOfRatings = findData?.ratings.reduce(
+    (acc, cur) => acc + Number(cur.rating),
+    0
+  );
+  const avg = sumOfRatings / findData?.ratings.length;
 
   return (
     <div className="rest-review-container">
@@ -30,6 +34,7 @@ const SinglePage = () => {
               )}
             </div>
             <div className="detail">{findData?.address}</div>
+            <div className="detail">Average Rating: {avg.toFixed(2)}</div>
           </div>
           <button
             className="cta-btn"
@@ -38,7 +43,7 @@ const SinglePage = () => {
               restIdReview.current = restId;
             }}
           >
-            Review
+            Add Review
           </button>
         </div>
         <h2 style={{ textAlign: "start" }}>Reviews</h2>

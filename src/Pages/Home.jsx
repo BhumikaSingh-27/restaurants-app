@@ -7,7 +7,7 @@ import RestCard from "../components/ResCard/RestCard";
 
 const Home = () => {
   const { showRestData } = useContext(DataContext);
-  console.log(showRestData);
+ 
   return (
     <div>
       <h1>Food Ordering App</h1>

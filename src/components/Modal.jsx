@@ -22,7 +22,7 @@ const Modal = () => {
             <label htmlFor="">Rating:</label>
             <select
               onChange={(e) =>
-                setAddReview({ ...addReview, rating: e.target.value })
+                setAddReview({ ...addReview, rating: Number(e.target.value) })
               }
             >
               <option value="0">Select Rating</option>
@@ -47,7 +47,9 @@ const Modal = () => {
             </div>
           </div>
         </div>
-        <button id="submit-btn" onClick={addRestReview}>Submit</button>
+        <button id="submit-btn" onClick={addRestReview}>
+          Submit
+        </button>
       </div>
     </div>
   );

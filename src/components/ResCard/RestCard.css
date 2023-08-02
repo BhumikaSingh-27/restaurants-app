@@ -5,11 +5,17 @@
     /* border: 1px solid; */
     margin: 4rem;
 }
-.restCard-container:hover{
+
+.restCard-container:hover {
     cursor: pointer;
+}
+
+.restCard-container h2 {
+    margin-bottom: 1rem;
 }
 
 .food-card-main {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
