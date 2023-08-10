@@ -3,9 +3,11 @@ import { NavLink, useParams } from "react-router-dom";
 import { DataContext } from "../contexts/DataContext";
 import ReviewCard from "../components/Review/ReviewCard";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Modal from "../components/Modal";
+
 
 const SinglePage = () => {
-  const { data, restIdReview, setIsModal } = useContext(DataContext);
+  const { data, restIdReview, setIsModal,isModal } = useContext(DataContext);
   const { restId } = useParams();
 
   const findData = data.find(({ id }) => id.toString() === restId);
@@ -14,9 +16,10 @@ const SinglePage = () => {
     0
   );
   const avg = sumOfRatings / findData?.ratings.length;
-
+ 
   return (
     <div className="rest-review-container">
+        {isModal && <Modal />}
       <NavLink className="not-link" to="/">
         {" "}
         <div>
@@ -45,6 +48,7 @@ const SinglePage = () => {
           >
             Add Review
           </button>
+        
         </div>
         <h2 style={{ textAlign: "start" }}>Reviews</h2>
         <div>
